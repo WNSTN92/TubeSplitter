@@ -12,14 +12,18 @@ TubeSplitter is a web application that allows users to extract separate audio st
 ## Setup & Installation
 
 1. Clone the repository.
+   `git clone https://github.com/YourUsername/TubeSplitter.git`
 
-2. Navigate into the project directory.
+3. Navigate into the project directory.
+   `cd TubeSplitter`
 
-3. Install the required Python packages.
+5. Install the required Python packages.
+   `pip install -r requirements.txt`
 
-4. Start the Flask application.
+7. Start the Flask application.
+   `python app.py`
 
-5. Navigate to `http://127.0.0.1:5000/` in your browser.
+9. Navigate to `http://127.0.0.1:5000/` in your browser.
 
 ## Contribution
 
