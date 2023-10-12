@@ -12,7 +12,7 @@ TubeSplitter is a web application that allows users to extract separate audio st
 ## Setup & Installation
 
 1. Clone the repository.
-   `git clone https://github.com/YourUsername/TubeSplitter.git`
+   `git clone https://github.com/WNSTN92/TubeSplitter.git`
 
 3. Navigate into the project directory.
    `cd TubeSplitter`
