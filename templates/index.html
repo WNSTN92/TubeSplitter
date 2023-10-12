@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TubeSplitter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>TubeSplitter</h2>
+        <form method="post">
+            <input type="text" name="yt_link" placeholder="Insert YouTube Link">
+            <br>
+            <br>
+            <input type="submit" value="Create Stems">
+        </form>
+        <br>
+        <div class="loading-container">
+            <div class="loader"></div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("form").on("submit", function(e) {
+                e.preventDefault();  // Prevent form from submitting the traditional way
+
+                var ytLink = $("input[name='yt_link']").val();
+
+                $.ajax({
+                    url: '/',
+                    method: 'POST',
+                    data: {
+                        yt_link: ytLink
+                    },
+                    success: function(response) {
+                        if(response.status == "success") {
+                            window.location.href = "/downloads/" + response.foldername + "/";
+                        }
+                    },
+                    complete: function() {
+                        $(".loading-container").hide();
+                        $("input[name='yt_link']").val('');  // Clear the input field
+                        $("input[type='submit']").prop('disabled', false);  // Enable the button again
+                    }
+                });
+
+                $(".loading-container").show();
+                $("input[type='submit']").prop('disabled', true);
+            });
+        });
+    </script>
+</body>
+</html>
