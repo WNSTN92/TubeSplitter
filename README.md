@@ -2,6 +2,8 @@
 
 TubeSplitter is a web application that allows users to extract separate audio stems from a YouTube video. Simply input the YouTube video link, and the application will provide you with a zip file containing the stems.
 
+<img src="https://github.com/WNSTN92/TubeSplitter/assets/147709972/cd5c4413-09b7-4353-8d06-e4a4ff7af11c" width="400">
+
 ## Features
 
 - **YouTube Video Download**: Downloads the provided YouTube video link.
