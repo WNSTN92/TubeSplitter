@@ -1,0 +1,4 @@
+Flask==2.0.1
+pytube==10.9.2
+moviepy==1.0.3
+spleeter==2.2.2
